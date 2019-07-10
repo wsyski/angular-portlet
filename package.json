@@ -36,7 +36,7 @@
 		"tslint": "~5.9.1",
 		"typescript": "~2.9.2"
 	},
-	"main": "lib/angular-loader.js",
+	"main": "lib/index.js",
 	"name": "angular-portlet",
 	"scripts": {
 		"build": "tsc && liferay-npm-bundler",

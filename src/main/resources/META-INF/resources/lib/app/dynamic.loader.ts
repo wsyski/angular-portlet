@@ -6,13 +6,19 @@ import {
 	Type,
 } from '@angular/core';
 
+import LiferayParams from '../types/LiferayParams'
+
+/**
+ * This class loads an Angular component dinamically so that we can attach it to
+ * the portlet's DOM, which is different for each portlet instance and thus, 
+ * cannot be determined until the page is rendered (during runtime).
+ */
 export class DynamicLoader {
 	constructor(private injector: Injector) {}
 
-	// Load an Angular component dinamically so that we can attach it to
-	// the portlet's DOM, which is different for each portlet instance and,
-	// thus, cannot be determined until the page is rendered (during runtime).
-	loadComponent<T>(component: Type<T>, dom: Element) {
+	loadComponent<T>(component: Type<T>, params: LiferayParams) {
+		const node = document.getElementById(params.portletElementId);
+		
 		(<NgZone>this.injector.get(NgZone)).run(() => {
 			const componentFactory = this.injector
 				.get(ComponentFactoryResolver)
@@ -20,8 +26,9 @@ export class DynamicLoader {
 			const componentRef = componentFactory.create(
 				this.injector,
 				[],
-				dom,
+				node,
 			);
+			componentRef.instance.params = params;
 			this.injector.get(ApplicationRef).attachView(componentRef.hostView);
 		});
 	}
