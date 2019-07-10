@@ -30,6 +30,5 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 <portlet:defineObjects />
 
 <%
-String loaderRequire = (String)renderRequest.getAttribute("loaderRequire");
-String mainRequire = (String)renderRequest.getAttribute("mainRequire");
+String moduleName = (String)renderRequest.getAttribute("moduleName");
 %>

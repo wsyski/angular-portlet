@@ -52,13 +52,8 @@ public class AngularPortlet extends MVCPortlet {
 		throws IOException, PortletException {
 
 		renderRequest.setAttribute(
-			"loaderRequire",
-			_npmResolver.resolveModuleName("angular-portlet") +
-				" as loader");
-
-		renderRequest.setAttribute(
-			"mainRequire",
-			_npmResolver.resolveModuleName("angular-portlet/lib/main"));
+			"moduleName",
+			_npmResolver.resolveModuleName("angular-portlet"));
 
 		super.doView(renderRequest, renderResponse);
 	}

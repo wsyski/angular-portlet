@@ -18,8 +18,38 @@
 
 <%@ include file="/init.jsp" %>
 
-<div id="<portlet:namespace />"></div>
+<div id="js-portlet-<portlet:namespace />"></div>
 
-<aui:script require="<%= loaderRequire %>">
-	loader.default('#<portlet:namespace />', '<%= mainRequire %>');
-</aui:script>
+<script type="text/javascript">
+	Liferay.Loader.require(
+			"<%= moduleName %>",
+			function(module) {
+				var initializer;
+
+				if (typeof module.default === 'function') {
+					initializer = module.default;
+				}
+				else if (typeof module === 'function') {
+					initializer = module;
+				}
+
+				if (initializer) {
+					initializer(
+							{
+								configuration: {
+									portletInstance: JSON.parse('{}'),
+									system: JSON.parse('{}')
+								},
+								contextPath: "<%= renderRequest.getContextPath() %>",
+								portletElementId: "js-portlet-<portlet:namespace/>",
+								portletNamespace: "<portlet:namespace/>"
+							});
+				}
+				else {
+					console.error(
+							'Module', '<%= moduleName %>',
+							'is not exporting a function: cannot initialize it.');
+				}
+
+			});
+</script>
