@@ -31,4 +31,8 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 
 <%
 String moduleName = (String)renderRequest.getAttribute("moduleName");
+WindowState windowState = renderRequest.getWindowState();
+
+boolean showStatus = PrefsParamUtil.getBoolean(portletPreferences, request, "showStatus", true);
+
 %>
