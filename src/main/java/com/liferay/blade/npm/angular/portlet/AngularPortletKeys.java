@@ -20,6 +20,10 @@ package com.liferay.blade.npm.angular.portlet;
  */
 public class AngularPortletKeys {
 
+	public static final String ANGULAR_PORTLET_NAME = "angularPortlet";
+	public static final String ANGULAR_PORTLET_DISPLAY_NAME = "Angular Portlet";
+
+
 	public static final String MICROBLOGS =
 		"com_liferay_microblogs_web_portlet_MicroblogsPortlet";
 

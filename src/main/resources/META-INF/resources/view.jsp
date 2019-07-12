@@ -1,4 +1,7 @@
-<%--
+<%@ page import="com.liferay.portal.kernel.json.JSONSerializer" %>
+<%@ page import="com.liferay.portal.kernel.json.JSONFactoryUtil" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="java.util.HashMap" %><%--
 /**
  * Copyright 2000-present Liferay, Inc.
  *
@@ -18,6 +21,10 @@
 
 <%@ include file="/init.jsp" %>
 
+<%
+    JSONSerializer jsonSerializer = JSONFactoryUtil.createJSONSerializer();
+    String preferencesAsJson = jsonSerializer.serializeDeep(portletPreferences.getMap());
+%>
 <div id="js-portlet-<portlet:namespace />"></div>
 
 <script type="text/javascript">
@@ -37,7 +44,7 @@
 					initializer(
 							{
 								configuration: {
-									portletInstance: JSON.parse('{}'),
+									portletInstance: JSON.parse('<%= preferencesAsJson %>'),
 									system: JSON.parse('{}')
 								},
 								contextPath: "<%= renderRequest.getContextPath() %>",
