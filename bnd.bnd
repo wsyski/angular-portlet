@@ -1,5 +1,5 @@
 Bundle-Name: Angular Portlet
-Bundle-SymbolicName: com.liferay.blade.npm.angular.portlet
+Bundle-SymbolicName: com.axiell.arena.ui.modules.angular_portlet.web
 Bundle-Version: 1.0.0
 Web-ContextPath: /angular-portlet
 -contract: JavaPortlet
