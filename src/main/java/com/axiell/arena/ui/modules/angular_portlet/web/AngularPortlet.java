@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.liferay.blade.npm.angular.portlet;
+package com.axiell.arena.ui.modules.angular_portlet.web;
 
 import com.liferay.frontend.js.loader.modules.extender.npm.NPMResolver;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;

@@ -12,7 +12,7 @@
  * details.
  */
 
-package com.liferay.blade.npm.angular.portlet;
+package com.axiell.arena.ui.modules.angular_portlet.web;
 
 /**
  * @author Jonathan Lee
