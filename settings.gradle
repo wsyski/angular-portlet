@@ -1,0 +1,4 @@
+include(
+	'modules:angular-portlet:angular-portlet-configuration',
+	'modules:angular-portlet:angular-portlet-web',
+)
