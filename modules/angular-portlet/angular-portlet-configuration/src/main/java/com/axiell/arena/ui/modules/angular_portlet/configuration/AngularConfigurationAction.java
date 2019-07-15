@@ -68,7 +68,7 @@ public class AngularConfigurationAction extends DefaultConfigurationAction {
     public void setServletContext(ServletContext servletContext) {
         super.setServletContext(servletContext);
     }
-    */
+     */
 
     @Activate
     protected void activate(final BundleContext bundleContext, final Map<String, Object> properties) {
