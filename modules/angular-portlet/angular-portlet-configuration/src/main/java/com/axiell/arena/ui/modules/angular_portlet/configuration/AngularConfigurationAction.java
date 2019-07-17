@@ -31,7 +31,7 @@ import java.util.stream.Collectors;
 public class AngularConfigurationAction extends DefaultConfigurationAction {
     private static final Log _log = LogFactoryUtil.getLog(
             AngularConfigurationAction.class);
-    private URL configURL;
+    // private URL configURL;
 
     @Override
     public String getJspPath(HttpServletRequest httpServletRequest) {
@@ -68,11 +68,13 @@ public class AngularConfigurationAction extends DefaultConfigurationAction {
     public void setServletContext(ServletContext servletContext) {
         super.setServletContext(servletContext);
     }
-     */
+    */
 
+    /*
     @Activate
     protected void activate(final BundleContext bundleContext, final Map<String, Object> properties) {
         configURL = bundleContext.getBundle().getResource("/META-INF/resources/configuration.jsp");
         _log.info("url: " + configURL);
     }
+     */
 }
