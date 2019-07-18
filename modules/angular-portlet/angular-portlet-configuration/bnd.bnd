@@ -2,5 +2,12 @@ Bundle-Name: Angular Portlet Configuration
 Bundle-SymbolicName: com.axiell.arena.ui.modules.angular_portlet.configuration
 Bundle-Version: 1.0.0
 Export-Package: com.axiell.arena.ui.modules.angular_portlet.configuration
-Fragment-Host: com.axiell.arena.ui.modules.angular_portlet.web
+Fragment-Host: com.axiell.arena.ui.modules.angular_portlet.web;bundle-version="1.0.0"
+-jsp:\
+	*.jsp,\
+	*.jspf
+-plugin.jsp: com.liferay.ant.bnd.jsp.JspAnalyzerPlugin
+-sources: true
+-dsannotations-options: inherit
+
 
