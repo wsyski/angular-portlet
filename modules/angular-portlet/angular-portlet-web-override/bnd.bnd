@@ -1,0 +1,6 @@
+Bundle-Name: Angular Portlet Web Override
+Bundle-SymbolicName: com.axiell.arena.ui.modules.angular_portlet.web.override
+Bundle-Version: 1.0.0
+Fragment-Host: com.axiell.arena.ui.modules.angular_portlet.web
+
+
