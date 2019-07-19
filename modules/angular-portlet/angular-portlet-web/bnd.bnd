@@ -1,4 +1,4 @@
-Bundle-Name: Angular Portlet
+Bundle-Name: Angular Portlet Web
 Bundle-SymbolicName: com.axiell.arena.ui.modules.angular_portlet.web
 Bundle-Version: 1.0.0
 Web-ContextPath: /angular-portlet
@@ -9,4 +9,4 @@ Web-ContextPath: /angular-portlet
 -plugin.bundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
 -plugin.jsp: com.liferay.ant.bnd.jsp.JspAnalyzerPlugin
 -plugin.sass: com.liferay.ant.bnd.sass.SassAnalyzerPlugin
--sources: true
+-sources: false
